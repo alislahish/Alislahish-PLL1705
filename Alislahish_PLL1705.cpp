@@ -8,9 +8,8 @@ Alislahish_PLL1705::Alislahish_PLL1705(uint8_t CSELpin, uint8_t FS1pin, uint8_t 
 		_FS1pin(FS1pin),
 		_FS2pin(FS2pin),
 		_SRpin(SRpin)
-		
-{
-}
+
+{}
 
 
 /**

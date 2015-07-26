@@ -1,12 +1,12 @@
 #######################################
-# Syntax Coloring Map For Alislahish_PLL1705
+# Syntax Coloring Map For Alislahish-PLL1705
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-PLL1705	KEYWORD1
+Alislahish_PLL1705	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
