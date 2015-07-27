@@ -70,6 +70,7 @@ uint8_t led = HIGH;
 void setup() {
   Serial.begin(115200);
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output    
+  //pinMode(LED_BUILTIN, OUTPUT);     // Arduino    
   //start the MCP23017
   mcp.begin(mcpAddr);
   //make the PLL1705 use the MCP23017
@@ -95,5 +96,6 @@ void loop() {
         led=HIGH;
     }
     digitalWrite(BUILTIN_LED, led);
+    //digitalWrite(LED_BUILTIN, led); //arduino
   }
 }
