@@ -43,7 +43,7 @@ void Alislahish_PLL1705::selectSamplingFrequency(PLLSamplingFrequencies freq){
 * start using this IC at a default frequency
 */
 void Alislahish_PLL1705::begin(){
-	begin(PLLSamplingFrequencies::KHZ_44100);
+	begin(PLLSamplingFrequencies::HZ_44100);
 }
 
 /**
@@ -80,32 +80,32 @@ void Alislahish_PLL1705::setPins(){
 
 	//sampling frequency
 	switch(_fs){
-		case PLLSamplingFrequencies::KHZ_32000:
+		case PLLSamplingFrequencies::HZ_32000:
 			ICUsingMCP23017::digitalWrite(_FS2pin, HIGH);
 			ICUsingMCP23017::digitalWrite(_FS1pin, LOW);
 			ICUsingMCP23017::digitalWrite(_SRpin, LOW);
 			break;
-		case PLLSamplingFrequencies::KHZ_44100:
+		case PLLSamplingFrequencies::HZ_44100:
 			ICUsingMCP23017::digitalWrite(_FS2pin, LOW);
 			ICUsingMCP23017::digitalWrite(_FS1pin, HIGH);
 			ICUsingMCP23017::digitalWrite(_SRpin, LOW);
 			break;
-		case PLLSamplingFrequencies::KHZ_48000:
+		case PLLSamplingFrequencies::HZ_48000:
 			ICUsingMCP23017::digitalWrite(_FS2pin, LOW);
 			ICUsingMCP23017::digitalWrite(_FS1pin, LOW);
 			ICUsingMCP23017::digitalWrite(_SRpin, LOW);
 			break;
-		case PLLSamplingFrequencies::KHZ_64000:
+		case PLLSamplingFrequencies::HZ_64000:
 			ICUsingMCP23017::digitalWrite(_FS2pin, HIGH);
 			ICUsingMCP23017::digitalWrite(_FS1pin, LOW);
 			ICUsingMCP23017::digitalWrite(_SRpin, HIGH);
 			break;
-		case PLLSamplingFrequencies::KHZ_88200:
+		case PLLSamplingFrequencies::HZ_88200:
 			ICUsingMCP23017::digitalWrite(_FS2pin, LOW);
 			ICUsingMCP23017::digitalWrite(_FS1pin, HIGH);
 			ICUsingMCP23017::digitalWrite(_SRpin, HIGH);
 			break;
-		case PLLSamplingFrequencies::KHZ_96000:
+		case PLLSamplingFrequencies::HZ_96000:
 			ICUsingMCP23017::digitalWrite(_FS2pin, LOW);
 			ICUsingMCP23017::digitalWrite(_FS1pin, LOW);
 			ICUsingMCP23017::digitalWrite(_SRpin, HIGH);

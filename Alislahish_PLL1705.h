@@ -35,12 +35,12 @@
 
 //valid sampling frequencies this generator can be used with
 enum class PLLSamplingFrequencies{
-	KHZ_32000 = 0x00,
-	KHZ_44100 = 0x01,
-	KHZ_48000 = 0x02,
-	KHZ_64000 = 0x03,
-	KHZ_88200 = 0x04,
-	KHZ_96000 = 0x05
+	HZ_32000 = 0x00,
+	HZ_44100 = 0x01,
+	HZ_48000 = 0x02,
+	HZ_64000 = 0x03,
+	HZ_88200 = 0x04,
+	HZ_96000 = 0x05
 };
 
 //generator sampling rates
