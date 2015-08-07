@@ -1,9 +1,9 @@
-# PLL1705
+# Alislahish-PLL1705
 
 Control a Texas Instruments PLL1705
 3.3V Dual Phase-locked loop Multiclock Generator
 
-_Attach it to your **ESP8266/Arduino** directly, or using an MCP23017 Expander
+_Attach it to your **ESP8266/Arduino** directly or using an MCP23017 Expander
 as an intermediary._
 
 
