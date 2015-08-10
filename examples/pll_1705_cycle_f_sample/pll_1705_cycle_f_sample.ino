@@ -64,7 +64,7 @@ long lastMillis = 0L;
 uint8_t led = HIGH;
 
 void setup() {
-  Serial.begin(115200);
+  //Serial.begin(115200);
   pinMode(BUILTIN_LED, OUTPUT);     // Initialize the BUILTIN_LED pin as an output    
   //start the MCP23017
   mcp.begin(mcpAddr);
