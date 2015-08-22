@@ -34,6 +34,7 @@
 #define ALISLAHISH_PLL1705_H
 
 //valid sampling frequencies this generator can be used with
+#define NUM_PLL_SAMPLING_FREQUENCIES 6
 enum class PLLSamplingFrequencies{
 	HZ_32000 = 0x00,
 	HZ_44100 = 0x01,
@@ -44,12 +45,14 @@ enum class PLLSamplingFrequencies{
 };
 
 //generator sampling rates
+#define NUM_PLL_SAMPLING_RATES 2
 enum class PLLSamplingRates{
 	SINGLE = 0x01,
 	DOUBLE = 0x02
 };
 
 //sampling rates for the SCKO1 output 
+#define NUM_PLL_SCKO_FREQUENCIES 2
 enum class SCKO1SamplingRates{
 	MHZ_33 = 0x00, //Low 33.8688 MHz
 	MHZ_16 = 0x01 //High 16.9344 MHz
@@ -61,8 +64,9 @@ class Alislahish_PLL1705 : public ICUsingMCP23017
 	public:
 		Alislahish_PLL1705(uint8_t CSELpin, uint8_t FS1pin, uint8_t FS2pin, uint8_t SRpin);
 		void selectSamplingFrequency(PLLSamplingFrequencies freq);
+		void selectSCKOFrequency(SCKO1SamplingRates rate);
 		void begin();
-		void begin(PLLSamplingFrequencies freq );
+		void begin(PLLSamplingFrequencies freq);
 
 	private:
 		//operating params

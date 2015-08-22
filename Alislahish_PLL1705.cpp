@@ -35,10 +35,16 @@ void Alislahish_PLL1705::selectSamplingFrequency(PLLSamplingFrequencies freq){
 	uint8_t sr = static_cast<uint8_t>(freq);
 	_sr = (sr<3) ? PLLSamplingRates::SINGLE : PLLSamplingRates::DOUBLE; //determine sampling rate
 	_fs = freq;
-	_scko1 = SCKO1SamplingRates::MHZ_16;
 	setPins();
 }
 
+/**
+* choose a SCKO1 output frequency
+*/
+void Alislahish_PLL1705::selectSCKOFrequency(SCKO1SamplingRates rate){
+	_scko1 = rate;
+	setPins();
+}
 /**
 * start using this IC at a default frequency
 */
@@ -52,6 +58,7 @@ void Alislahish_PLL1705::begin(){
 void Alislahish_PLL1705::begin(PLLSamplingFrequencies freq){
 	setPinModes();
 	selectSamplingFrequency(freq);
+	selectSCKOFrequency(SCKO1SamplingRates::MHZ_16);
 }
 
 /**
