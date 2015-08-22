@@ -39,6 +39,13 @@ void Alislahish_PLL1705::selectSamplingFrequency(PLLSamplingFrequencies freq){
 }
 
 /**
+* getters
+*/
+PLLSamplingFrequencies Alislahish_PLL1705::getSamplingFrequency() { return _fs; }
+PLLSamplingRates Alislahish_PLL1705::getSamplingRate(){ return _sr; }
+SCKO1SamplingRates Alislahish_PLL1705::getSCKOFrequency(){ return _scko1; }
+
+/**
 * choose a SCKO1 output frequency
 */
 void Alislahish_PLL1705::selectSCKOFrequency(SCKO1SamplingRates rate){

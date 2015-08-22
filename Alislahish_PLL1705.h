@@ -65,6 +65,12 @@ class Alislahish_PLL1705 : public ICUsingMCP23017
 		Alislahish_PLL1705(uint8_t CSELpin, uint8_t FS1pin, uint8_t FS2pin, uint8_t SRpin);
 		void selectSamplingFrequency(PLLSamplingFrequencies freq);
 		void selectSCKOFrequency(SCKO1SamplingRates rate);
+
+		PLLSamplingFrequencies getSamplingFrequency();
+		PLLSamplingRates getSamplingRate();
+		SCKO1SamplingRates getSCKOFrequency();
+
+
 		void begin();
 		void begin(PLLSamplingFrequencies freq);
 
