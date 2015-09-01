@@ -44,6 +44,10 @@ enum class PLLSamplingFrequencies{
 	HZ_96000 = 0x05
 };
 
+static const uint32_t PLLSamplingFrequenciesAsU32[NUM_PLL_SAMPLING_FREQUENCIES]={
+	32000L, 44100L, 48000L, 64000L, 88200L, 96000L
+};
+
 //generator sampling rates
 #define NUM_PLL_SAMPLING_RATES 2
 enum class PLLSamplingRates{
